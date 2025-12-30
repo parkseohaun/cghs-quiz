@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Teachable Machine -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.9.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+  <meta charset="UTF-8">
+  <title>천여 탐방 - 퀴즈 1</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- ⭐ 현재 퀴즈 번호 -->
+<body data-quiz="1">
+
+  <div class="container">
+
+    <h1>천여 탐방 퀴즈</h1>
+
+    <h2>이곳은 어디일까요?</h2>
+
+    <p class="hint">
+      힌트: 트리와 우리학교 이름이 써있는 로비
+    </p>
+
+    <!-- ================= -->
+    <!-- 이미지 입력 영역 -->
+    <!-- ================= -->
+    <div class="input-box">
+      <p>사진을 업로드하거나 카메라로 찍어주세요</p>
+      
+      <p class="notice">
+        📌 사진 업로드 가능 형식: JPG, PNG, WEBP<br>
+        HEIC 형식은 지원하지 않습니다.<br>
+        형식이 맞지 않을 경우 <strong>카메라로 이미지를 제출해주세요.</strong>
+      </p>
+
+
+      <!-- 숨겨진 파일 입력 -->
+      <input type="file"
+            id="imageUpload"
+            accept="image/jpeg, image/png, image/webp"
+            hidden>
+
+      <input type="file"
+            id="cameraUpload"
+            accept="image/*"
+            capture="environment"
+            hidden>
+
+      <!-- 사용자용 버튼 -->
+      <button id="uploadBtn">📁 사진 업로드</button>
+      <button id="cameraBtn">📷 카메라 촬영</button>
+
+      <!-- 미리보기 -->
+      <img id="preview" class="preview">
+    </div>
+
+
+    <!-- 제출 버튼 -->
+    <button id="submitBtn">제출</button>
+
+    <!-- ================= -->
+    <!-- 오답 처리 UI -->
+    <!-- ================= -->
+    <div id="wrongBox" style="display:none; margin-top:20px;">
+      <p id="resultText">❌ 틀렸습니다!</p>
+
+      <button id="retryBtn">다시 도전</button>
+      <button id="skipBtn" class="secondary">다음 문제로 넘어가기</button>
+    </div>
+
+    <!-- ================= -->
+    <!-- 정답 처리 UI -->
+    <!-- ================= -->
+    <div id="correctBox" style="display:none; margin-top:20px;">
+      <p id="correctText">🎉 정답입니다!</p>
+      <button id="nextBtn">다음 퀴즈 풀기</button>
+    </div>
+
+  </div>
+
+  <!-- quiz.js 연결 -->
+  <script type="module" src="js/quiz.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* =========================
+   기본 설정
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* =========================
+   공통 컨테이너
+========================= */
+.container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* =========================
+   제목
+========================= */
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* =========================
+   입력창
+========================= */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* =========================
+   버튼
+========================= */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #4c5caf;
+  color: white;
+}
+
+button:hover {
+  background-color: #37437d;
+}
+
+button.secondary {
+  background-color: #de5b5b;
+}
+
+button.secondary:hover {
+  background-color: #ba4d4d;
+}
+
+button.danger {
+  background-color: #f44336;
+}
+
+button.danger:hover {
+  background-color: #e53935;
+}
+
+/* =========================
+   퀴즈 영역
+========================= */
+.hint {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.preview {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+  display: none;
+}
+
+.notice {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.notice strong {
+  color: #c0392b;
+}
+
+/* =========================
+   결과 텍스트
+========================= */
+.result {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.correct {
+  color: #61af4c;
+}
+
+.wrong {
+  color: #d32f2f;
+}
+
+/* =========================
+   클리어 페이지
+========================= */
+.score {
+  font-size: 22px;
+  margin: 20px 0;
+}
