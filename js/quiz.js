@@ -285,5 +285,6 @@ function showWrongUI(best) {
 }
 
 if (quizNumber === TOTAL_QUIZ) {
-  document.getElementById("nextBtn").innerText = "클리어 화면으로";
+  document.getElementById("nextBtn").innerText = "클리어 페이지로";
 }
+
